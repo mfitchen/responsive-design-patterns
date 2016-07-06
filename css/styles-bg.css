@@ -82,10 +82,9 @@ nav, section {
   }
 
   section {
-    min-width: 48%;
+    width: 48%;
     height: 30vh;
     margin-bottom: 1vh;
-
   }
 
 }
