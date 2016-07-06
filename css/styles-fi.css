@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+main {
+  background-color: cyan;
+}
+
+aside.first {
+  background-color: tomato;
+}
+
+aside.second {
+  background-color: lightgreen;
+}
+
+main, aside {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 599px) {
+
+  main {
+    float: left;
+    width: 100vw;
+    height: 49vh;
+    /*margin-bottom: 1vh;*/
+  }
+
+  aside {
+    float: left;
+    width: 100vw;
+    height: 24vh;
+    margin-top: 1vh;
+  }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+  main {
+    float: left;
+    width: 100vw;
+    height: 49vh;
+    margin-bottom: 1vh;
+  }
+
+  aside {
+    float: left;
+    width: 49vw;
+    height: 50vh;
+  }
+
+  aside.second {
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+  main {
+    float: left;
+    width: 68vw;
+    height: 100vh;
+  }
+
+  aside {
+    float: right;
+    width: 30vw;
+    height: 49vh;
+  }
+
+  aside.first {
+    margin-bottom: 1vh;
+  }
+
+  aside.second {
+    margin-top: 1vh;
+  }
+
+}
