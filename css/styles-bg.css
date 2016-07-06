@@ -6,19 +6,35 @@
             box-sizing: border-box;
 }
 
-main {
-  background-color: cyan;
+nav {
+  background-color: mediumpurple;
 }
 
-aside.first {
+section.first {
   background-color: tomato;
 }
 
-aside.second {
+section.second {
   background-color: lightgreen;
 }
 
-main, aside {
+section.third {
+  background-color: steelblue;
+}
+
+section.fourth {
+  background-color: orange;
+}
+
+section.fifth {
+  background-color: seagreen;
+}
+
+section.sixth {
+  background-color: cyan;
+}
+
+nav, section {
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -28,17 +44,16 @@ main, aside {
 
 @media only screen and (max-width: 599px) {
 
-  main {
+  nav {
     float: left;
     width: 100vw;
-    height: 49vh;
-    /*margin-bottom: 1vh;*/
+    height: 75px;
   }
 
-  aside {
+  section {
     float: left;
     width: 100vw;
-    height: 24vh;
+    height: 30vh;
     margin-top: 1vh;
   }
 
@@ -46,45 +61,56 @@ main, aside {
 
 @media only screen and (min-width: 600px) {
 
-  main {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav {
     float: left;
     width: 100vw;
-    height: 49vh;
+    height: 75px;
     margin-bottom: 1vh;
   }
 
-  aside {
-    float: left;
-    width: 49vw;
-    height: 50vh;
+  .wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
-  aside.second {
-    float: right;
+  section {
+    min-width: 48%;
+    height: 30vh;
+    margin-bottom: 1vh;
+
   }
 
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1150px) {
 
-  main {
+  nav {
     float: left;
-    width: 68vw;
-    height: 100vh;
+    width: 100vw;
+    height: 10vh;
   }
 
-  aside {
-    float: right;
-    width: 30vw;
-    height: 49vh;
+  .wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
-  aside.first {
+  section {
+    min-width: 31%;
+    height: 30vh;
     margin-bottom: 1vh;
-  }
 
-  aside.second {
-    margin-top: 1vh;
   }
 
 }
